@@ -1,21 +1,23 @@
 ---
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 services:
-  - neo4j
+- neo4j
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
 after_script:
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  - git remote add heroku git@heroku.com:movie-database-team2.git
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  - heroku keys:clear
-  - yes | heroku keys:add
-  - yes | git push heroku master
+- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- git remote add heroku git@heroku.com:movie-database-team2.git
+- echo "Host heroku.com" >> ~/.ssh/config
+- echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+- echo "   CheckHostIP no" >> ~/.ssh/config
+- echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+- heroku keys:clear
+- yes | heroku keys:add
+- yes | git push heroku master
 env:
   global:
-  - secure: "OUaLU8ovAFV7pFJUjeKbtukuTbPDbmIDfKjBvQadE9n3kRTkp86xLx9G3Jo5\njXxoPUeErGk8pH1jrXZU7HK/wCdoLZKj/ShbuulXjkJjxGwMvM9xemOoegPQ\nC/0X99ZZjU1AVSBbICVr5aG7VwFOOjE0f30bUQI3IDsIua2B4bM="
+  - secure: ! 'FF/y/T4VU0XBeJRryXoroDKp+ifyW1PanQzf7H/H4w3mvOJRUk9j2gsVUzEk
+      rjULpVIk53wNQ0VvKGDxxQdT3rN8zMYGjPWIQLEkAqOnRgrDACijaf5fCVJj
+      U1rhpg6nh4fdn1vRPHJbkZMRHsowT+5lAfoDPmQN6HpblL1xVYg='
